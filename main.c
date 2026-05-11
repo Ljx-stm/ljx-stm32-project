@@ -50,7 +50,6 @@ int main(void)
 			DHT11_Read_Data(&temperature, &humidity);
 		}
 
-		// 修复MQ135一插就100% 专属代码
 		adc_val = Get_Adc_Average(ADC_Channel_0, 10);
 		air_quality = adc_val / 65;
 		if(air_quality < 10)  air_quality = 10;
